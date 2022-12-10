@@ -1,0 +1,83 @@
+.level {
+
+	//margin-bottom: 20px;
+
+	&__container {
+		display: flex;
+		//padding-top: 159px;
+		align-items: flex-start;
+		@include adaptiveValue("padding-top", 100, 65);
+		@include adaptiveValue("padding-bottom", 40, 10);
+	}
+
+	&__picture {
+		position: relative;
+		padding: 0px 0px 67.15% 0px;
+		flex: 0 1 50%;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	&__img {
+		border-radius: 10px;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	&__content {
+		flex: 0 1 50%;
+		padding: 294px 0px 131px 60px;
+		@include adaptiveValue("padding-top", 294, 60, 1370, 768);
+		@include adaptiveValue("padding-left", 60, 20, 1370, 768);
+
+		@media (max-width: 768px) {
+			padding: 0;
+		}
+	}
+
+	&__title {
+		font-weight: 400;
+		font-size: 70px;
+		line-height: 88px;
+		letter-spacing: 3.2px;
+		margin: 0px 0px 90px 0px;
+		@include adaptiveValue("font-size", 70, 40, 1370, 768);
+		@include adaptiveValue("line-height", 88, 46, 1370, 768);
+		@include adaptiveValue("margin-bottom", 90, 20, 1370, 768);
+
+		@media (max-width: 768px) {
+			//	@include adaptiveValue("font-size", 40, 30);
+			@include adaptiveValue("max-width", 300, 300);
+			margin-bottom: 10px;
+			font-size: 40px;
+			padding: 0;
+		}
+
+	}
+
+	span {
+		font-weight: 700;
+	}
+}
+
+.platforms-level {
+	display: flex;
+	flex-direction: column;
+	row-gap: 16px;
+
+	&__title {
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 24px;
+	}
+
+	&__icons {
+		display: flex;
+		column-gap: 18px;
+	}
+}

@@ -1,0 +1,135 @@
+.jacob {
+	//padding-top: 100px;
+	//padding-bottom: 100px;
+
+	@include adaptiveValue("padding-top", 40, 0, 1370, 768);
+	@include adaptiveValue("padding-bottom", 40, 0, 1370, 320);
+
+	&__container {
+		display: flex;
+		align-items: flex-start;
+
+		@media (max-width: 660px) {
+			display: block;
+		}
+	}
+
+	&__content {
+		flex: 0 1 50%;
+		padding: 147px 60px 147px 0px;
+
+		@include adaptiveValue("padding-top", 147, 20, 1370, 1024);
+		@include adaptiveValue("padding-right", 60, 10, 1370, 768);
+		@include adaptiveValue("padding-bottom", 147, 20, 1370, 320);
+
+		@media (max-width: 425px) {
+			padding-right: 0;
+		}
+	}
+
+
+	&__link {
+		display: block;
+		position: relative;
+		width: 112px;
+		height: 112px;
+		border-radius: 50%;
+		background-color: #118DA8;
+		margin-bottom: 20px;
+
+		@include adaptiveValue("width", 112, 20);
+		@include adaptiveValue("height", 112, 20);
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+
+		&:hover {
+			color: rgba(255, 255, 255);
+			transition: all 0.4s ease 0s;
+			background-color: #026f88;
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		width: 80%;
+		top: 28%;
+		left: 12%;
+	}
+
+
+	&__sublink {
+		font-size: 18px;
+		line-height: 27px;
+		color: #118DA8;
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	&__sublink_phone {
+		@media (max-width: 137000px) {
+			display: none;
+		}
+
+		@media (max-width: 768px) {
+			display: block;
+		}
+	}
+
+	&__name {
+		font-size: 65px;
+		line-height: 79px;
+		letter-spacing: 2.88px;
+		margin-bottom: 28px;
+
+		@include adaptiveValue("font-size", 65, 40, 1370, 768);
+		@include adaptiveValue("line-height", 79, 40);
+		@include adaptiveValue("margin-bottom", 28, 15, 1370, 768);
+
+		@media (max-width: 768px) {
+			@include adaptiveValue("font-size", 40, 20);
+			//font-size: rem(40);
+		}
+	}
+
+	&__text {
+		font-size: 22px;
+		line-height: 33px;
+		color: rgba(255, 255, 255, 0.7);
+		margin-bottom: 20px;
+
+		@include adaptiveValue("font-size", 22, 16);
+		@include adaptiveValue("line-height", 33, 20);
+	}
+
+	&__picture {
+		position: relative;
+		padding: 0px 0px 57.15% 0px;
+		flex: 0 1 50%;
+
+		@media (max-width: 660px) {
+			display: none;
+		}
+	}
+
+	&__image {
+		border-radius: 14px;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+
+	}
+
+	span {
+		display: block;
+		margin-bottom: 33px;
+
+		@include adaptiveValue("margin-bottom", 33, 15, 1370, 530);
+	}
+
+}
